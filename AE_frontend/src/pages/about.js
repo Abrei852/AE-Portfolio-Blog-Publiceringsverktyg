@@ -9,7 +9,12 @@ import Image from "gatsby-image"
 import ReactMarkdown from "react-markdown"
 import downloadFile from "../../static/AECV.pdf"
 
-const About = () => {
+const About = ({
+  data: {
+    about: { nodes },
+  },
+}) => {
+  const { info, stack, title, image } = nodes[0]
   return (
     <Layout>
       <SEO title="CV" description="Abrahams CV" />
@@ -17,7 +22,7 @@ const About = () => {
         <AboutInfoWrapper>
         <Image fluid={image.childImageSharp.fluid} className="about-img" />
           <Article>
-            <Title></Title>
+            <Title>{title}</Title>
           <ReactMarkdown source={info} />
             <div className="about-stack">
               {stack.map(item => {
