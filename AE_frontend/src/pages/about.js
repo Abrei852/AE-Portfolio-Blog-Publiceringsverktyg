@@ -15,13 +15,12 @@ const About = ({
   },
 }) => {
   const { info, stack, title, image } = nodes[0]
-  console.log(nodes);
   return (
     <Layout>
       <SEO title="CV" description="Abrahams CV" />
       <AboutWrapper>
         <AboutInfoWrapper>
-        <Image fluid={image.childImageSharp.fluid} className="about-img" />
+        <Image fluid={image.childImageSharp.fluid}/>
           <Article>
             <Title>{title}</Title>
           <ReactMarkdown source={info} />
@@ -46,25 +45,32 @@ const About = ({
 }
 
 export const query = graphql`
-  {
-    about: allStrapiAbout {
-      nodes {
-        stack {
-          id
-          title
-        }
+{
+  about:allStrapiAbout {
+    nodes {
+      stack {
+        id
         title
-        info
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+      }
+      Title
+      info
+      image {
+        childImageSharp {
+          fluid {
+            base64
+            tracedSVG
+            srcWebp
+            srcSetWebp
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
           }
         }
       }
     }
   }
+}
 `
 
 export default About

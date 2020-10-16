@@ -52,7 +52,7 @@ const Jobs = () => {
         {/* job info */}
           <Job date = {date} position={position} company={company} desc={desc}/>
       </Div>
-      <Button>Mitt CV</Button>
+      <Button href="about/">Mitt CV</Button>
     </JobsWrapper>
   )
 }

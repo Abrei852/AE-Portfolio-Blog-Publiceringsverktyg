@@ -26,8 +26,8 @@
     },
     "stack": {
       "type": "component",
-      "repeatable": false,
-      "component": "title.stack",
+      "repeatable": true,
+      "component": "description.stack",
       "required": true
     },
     "info": {

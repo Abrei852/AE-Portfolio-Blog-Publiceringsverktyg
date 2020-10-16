@@ -55,6 +55,11 @@ export const ContactFormWrapper = styled.article`
 export const AboutWrapper = styled.section`
     min-height: calc(100vh - 5rem - 9rem);
     padding: 7rem 0;
+
+    .gatsby-image-wrapper{
+        height: 20rem;
+        width: 30rem;
+    }
 `
 export const AboutInfoWrapper = styled.div`
     width: 90vw;
