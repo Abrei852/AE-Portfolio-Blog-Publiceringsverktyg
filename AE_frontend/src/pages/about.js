@@ -22,9 +22,9 @@ const About = ({
         <AboutInfoWrapper>
         <Image fluid={image.childImageSharp.fluid}/>
           <Article>
-            <Title>{title}</Title>
+            <Title title="Abraham Eishow"/>
           <ReactMarkdown source={info} />
-            <div className="about-stack">
+            <div>
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>
               })}
@@ -38,7 +38,6 @@ const About = ({
             <Button href="contact/">Kontakta Mig</Button>
           </Article>
         </AboutInfoWrapper>
-        <></>
       </AboutWrapper>
     </Layout>
   )

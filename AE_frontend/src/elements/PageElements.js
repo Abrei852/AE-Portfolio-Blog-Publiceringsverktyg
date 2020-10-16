@@ -58,7 +58,15 @@ export const AboutWrapper = styled.section`
 
     .gatsby-image-wrapper{
         height: 20rem;
-        width: 30rem;
+        width: 15rem;
+        margin: auto;
+    }
+
+    @media ${props => props.theme.breakpoints.mediumscreen}{
+        .gatsby-image-wrapper{
+            margin-top: 0;
+
+        }
     }
 `
 export const AboutInfoWrapper = styled.div`
@@ -80,9 +88,15 @@ export const Article = styled.article`
     margin-left: 0;
     margin-right: 0;
     line-height: 2;
+    text-align: center;
 
     @media ${props => props.theme.breakpoints.mediumscreen}{
-        grid-column: 6 / -1;
+        width: 35rem;
+        text-align: left;
+        font-size: 1.2rem;
+        padding: 2rem;
+        margin: auto;
+
     }
 
     div{
@@ -94,7 +108,6 @@ export const Article = styled.article`
         font-weight: 700;
         font-size: 0.875rem;
         border: 2px solid transparent;
-        cursor: pointer;
     }
     a{
         display: inline-block;
