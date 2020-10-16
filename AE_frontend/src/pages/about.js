@@ -3,6 +3,10 @@ import Layout from "../components/Layout"
 import { AboutWrapper, AboutInfoWrapper, Article } from "../elements/PageElements"
 import { Button } from "../components/Button"
 import SEO from "../components/SEO"
+import { graphql } from "gatsby"
+import Title from "../components/Title"
+import Image from "gatsby-image"
+import ReactMarkdown from "react-markdown"
 import downloadFile from "../../static/AECV.pdf"
 
 const About = () => {
@@ -11,7 +15,15 @@ const About = () => {
       <SEO title="CV" description="Abrahams CV" />
       <AboutWrapper>
         <AboutInfoWrapper>
+        <Image fluid={image.childImageSharp.fluid} className="about-img" />
           <Article>
+            <Title></Title>
+          <ReactMarkdown source={info} />
+            <div className="about-stack">
+              {stack.map(item => {
+                return <span key={item.id}>{item.title}</span>
+              })}
+            </div>
             <div>
               <a href={downloadFile} download>
                 Ladda ner fullständig CV
@@ -27,5 +39,26 @@ const About = () => {
   )
 }
 
+export const query = graphql`
+  {
+    about: allStrapiAbout {
+      nodes {
+        stack {
+          id
+          title
+        }
+        title
+        info
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default About
