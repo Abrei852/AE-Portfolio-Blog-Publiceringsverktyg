@@ -15,6 +15,7 @@ const About = ({
   },
 }) => {
   const { info, stack, title, image } = nodes[0]
+  console.log(nodes);
   return (
     <Layout>
       <SEO title="CV" description="Abrahams CV" />
