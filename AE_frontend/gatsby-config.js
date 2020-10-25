@@ -6,10 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Abraham Eishow blog",
+    title: "Abraham Eishows blog",
     description: "Min bloggsida",
-    author: "@AbrahamEishow",
-    twitterUsername: "@abbe1334",
+    author: "@EishowAbraham",
+    twitterUsername: "@EishowAbraham",
     image: "/twitter-img.png",
     siteUrl: "https://abraham-eishow-portfolio-publiceringsverktyg.netlify.app/",
   },
