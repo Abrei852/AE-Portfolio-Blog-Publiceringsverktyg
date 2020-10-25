@@ -12,7 +12,7 @@ const Blog = ({
 }) => {
   return (
     <Layout>
-      <SEO title="Bloggen" description="Bloggsidan"/>
+      <SEO title="Bloggar" description="Bloggsidan"/>
         <Blogs blogs={blogs} title="Alla artiklar" />
     </Layout>
   )
