@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Abraham Eishow blog",
     description: "Min bloggsida",
-    author: "@AE",
+    author: "@AbrahamEishow",
     twitterUsername: "@abbe1334",
     image: "/twitter-img.png",
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
